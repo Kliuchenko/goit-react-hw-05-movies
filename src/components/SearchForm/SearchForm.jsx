@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export const SearchForm = ( {onSubmit} ) => {
-    const [value, setValue] = useState('');
+  const [value, setValue] = useState('');
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -11,17 +11,17 @@ export const SearchForm = ( {onSubmit} ) => {
   };
 
   return (
-                 <form autoComplete="on" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-                      placeholder="Enter any film name"
-            required
-            onChange={e => setValue(e.target.value)}
-          />
-          <button type="submit" >
-            Search
-          </button>
-        </form>
-           );
+   <form autoComplete="on" onSubmit={handleSubmit}>
+     <input
+      type="text"
+      name="name"
+      placeholder="Enter any film name"
+      required
+      onChange={e => setValue(e.target.value)}
+    />
+    <button type="submit" >
+     Search
+    </button>
+  </form>
+  );
 }
